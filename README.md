@@ -1,37 +1,129 @@
-# Customer Churn Platform
+# HR Analytics & Predictive Attrition Platform
 
 ## Overview
 
-Customer Churn Platform is an end-to-end machine learning project for predicting customer churn from relational customer data.
+HR Analytics & Predictive Attrition Platform is an end-to-end machine learning project designed to analyze workforce data and predict employee attrition.
 
-This project was originally inspired by a Statistical Hackathon where a predictive churn solution was developed using enterprise customer data.
+The project combines data engineering, business intelligence, and machine learning to support data-driven HR decision making. It demonstrates a complete analytics workflow, from data preprocessing and feature engineering to predictive modeling, explainable AI, and interactive dashboards.
 
-> **🔒 Confidentiality & Data Privacy:**  
-> Because the original datasets are confidential, this repository utilizes statistically equivalent **synthetic datasets**. This approach preserves the original data structure, feature correlations, and machine learning workflow while ensuring strict GDPR compliance.
-
-The goal is to build a reusable platform that allows users to upload customer data, engineer features automatically, train machine learning models, and generate churn predictions.
+The goal is to build a reusable analytics platform that enables HR professionals to explore employee data, identify attrition risk factors, and generate actionable insights through visual dashboards and predictive models.
 
 ---
 
 ## Features
 
-- Synthetic relational data generation
+- HR data preprocessing
 - Data validation
 - Feature engineering
-- Machine learning model training
-- Model comparison
-- Churn prediction
+- Employee attrition prediction
+- XGBoost machine learning model
+- SHAP explainability
+- Power BI dashboard
 - Streamlit web application
+- Interactive employee risk prediction
+
+---
+
+## Technologies
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- XGBoost
+- SHAP
+- Power BI
+- Streamlit
+- Git
+
+---
+
+## Dataset
+
+This project uses the publicly available **IBM HR Analytics Employee Attrition Dataset**, a widely used benchmark dataset for employee attrition prediction and HR analytics research.
 
 ---
 
 ## Project Roadmap
 
-- [x] Design synthetic datasets
-- [ ] Generate synthetic data
-- [ ] Build preprocessing pipeline
+- [x] Project design
+- [ ] Data exploration
+- [ ] Data preprocessing
 - [ ] Feature engineering
-- [ ] Train multiple ML models
-- [ ] Evaluate model performance
-- [ ] Build Streamlit application
+- [ ] Train XGBoost model
+- [ ] Model evaluation
+- [ ] SHAP explainability
+- [ ] Power BI dashboard
+- [ ] Streamlit application
+- [ ] FastAPI integration
 - [ ] Documentation
+
+---
+
+## Project Structure
+
+```text
+hr-analytics-platform/
+
+├── data/
+│   ├── raw/
+│   └── processed/
+│
+├── src/
+│   ├── etl.py
+│   ├── train.py
+│   ├── predict.py
+│   └── feature_engineering.py
+│
+├── powerbi/
+│   ├── dashboard.pbix
+│   └── dashboard_preview.png
+│
+├── streamlit/
+│   └── app.py
+│
+├── models/
+│
+├── README.md
+└── requirements.txt
+```
+
+---
+
+## Workflow
+
+```text
+IBM HR Dataset
+        │
+        ▼
+Data Cleaning
+        │
+        ▼
+Feature Engineering
+        │
+        ▼
+Machine Learning
+        │
+ ┌──────┴────────┐
+ ▼               ▼
+Power BI      SHAP Explainability
+        │
+        ▼
+ Streamlit Application
+```
+
+---
+
+## Future Improvements
+
+- FastAPI deployment
+- Docker support
+- Cloud deployment
+- Model monitoring
+- Automated retraining pipeline
+
+---
+
+## License
+
+This project is intended for educational and portfolio purposes.
