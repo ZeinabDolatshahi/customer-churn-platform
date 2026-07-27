@@ -26,7 +26,7 @@ The goal is to build a reusable machine learning platform that allows users to u
 
 ## Project Roadmap
 
-- [ ] Design synthetic datasets
+- [x] Design synthetic datasets
 - [ ] Generate synthetic data
 - [ ] Build preprocessing pipeline
 - [ ] Feature engineering
