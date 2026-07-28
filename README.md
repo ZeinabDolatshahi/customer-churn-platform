@@ -47,8 +47,8 @@ This project uses the publicly available **IBM HR Analytics Employee Attrition D
 ## Project Roadmap
 
 - [x] Project design
-- [ ] Data exploration
-- [ ] Data preprocessing
+- [x] ETL pipeline
+- [x] Exploratory data analysis (EDA)
 - [ ] Feature engineering
 - [ ] Train XGBoost model
 - [ ] Model evaluation
