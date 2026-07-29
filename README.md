@@ -47,8 +47,8 @@ This project uses the publicly available **IBM HR Analytics Employee Attrition D
 ## Project Roadmap
 
 - [x] Project design
-- [ ] Data exploration
-- [ ] Data preprocessing
+- [x] ETL pipeline
+- [x] Exploratory data analysis (EDA)
 - [ ] Feature engineering
 - [ ] Train XGBoost model
 - [ ] Model evaluation
@@ -64,16 +64,28 @@ This project uses the publicly available **IBM HR Analytics Employee Attrition D
 
 ```text
 hr-analytics-platform/
-
+│
 ├── data/
 │   ├── raw/
 │   └── processed/
 │
+├── notebooks/
+│   ├── 01_EDA.ipynb
+│   ├── 02_Feature_Engineering.ipynb
+│   ├── 03_XGBoost_Model.ipynb
+│   ├── 04_Model_Evaluation.ipynb
+│   └── 05_SHAP_Explainability.ipynb
+│
 ├── src/
 │   ├── etl.py
+│   ├── feature_engineering.py
 │   ├── train.py
 │   ├── predict.py
-│   └── feature_engineering.py
+│   └── utils.py
+│
+├── models/
+│   ├── xgboost_model.pkl
+│   └── label_encoder.pkl
 │
 ├── powerbi/
 │   ├── dashboard.pbix
@@ -82,10 +94,12 @@ hr-analytics-platform/
 ├── streamlit/
 │   └── app.py
 │
-├── models/
+├── images/
 │
+├── requirements.txt
 ├── README.md
-└── requirements.txt
+├── LICENSE
+└── .gitignore
 ```
 
 ---
@@ -93,24 +107,33 @@ hr-analytics-platform/
 ## Workflow
 
 ```text
-IBM HR Dataset
-        │
-        ▼
-Data Cleaning
-        │
-        ▼
+IBM HR Analytics Dataset
+          │
+          ▼
+ETL Pipeline
+(Load → Validate → Clean)
+          │
+          ▼
+Exploratory Data Analysis (EDA)
+          │
+          ▼
 Feature Engineering
-        │
-        ▼
-Machine Learning
-        │
- ┌──────┴────────┐
- ▼               ▼
-Power BI      SHAP Explainability
-        │
-        ▼
- Streamlit Application
-```
+          │
+          ▼
+Train XGBoost Model
+          │
+          ▼
+Model Evaluation
+          │
+          ▼
+SHAP Explainability
+      ┌───┴───┐
+      ▼       ▼
+ Power BI  Streamlit
+ Dashboard  Web App
+          │
+          ▼
+      FastAPI (Optional)
 
 ---
 
